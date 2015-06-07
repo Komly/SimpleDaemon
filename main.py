@@ -55,8 +55,6 @@ def main():
     os.dup2(si.fileno(), sys.stdin.fileno())
     os.dup2(so.fileno(), sys.stdout.fileno())
     os.dup2(se.fileno(), sys.stderr.fileno())
-    print("hello from hell")
-    print("i'm fucking %d" % os.getuid())
     
     # Write pid file
     open(pid_file, 'w+').write('%d\n' % os.getpid())
